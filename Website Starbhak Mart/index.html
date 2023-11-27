@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbhak Mart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<body>
+    <div class="container">
+
+        <!-- Judul Navbar -->
+        <header>
+            <h1>Starbhak Mart</h1>
+        </header>
+
+        <!-- Kotak utama -->
+        <div class="kotak">
+
+            <!-- Sidebar -->
+            <div class="kiri" id="section-to-print">
+
+                <!-- Button paling atas -->
+                <select class="satu">
+                    <option hidden>Pilih Jenis Pemesanan</option>
+                    <option>Take Away</option>
+                    <option>Delivery</option>
+                </select>
+                <button class="dua"><span class="material-symbols-outlined"
+                        style="color: black !important; font-size: 16px; ">
+                        face
+                    </span>Mang.Jay</button>
+
+                <!-- Penampung class baru -->
+                <div class="belanja">
+                    <div class="barang" style="display: none;"> 
+                        <div class="detail-kiri">
+                            <p id="nama-barang" style="font-size: small; font-weight: 500;"></p>
+                            <p id="harga-satuan" style="text-align: right; font-size: small;"></p>
+                        </div>
+                        <div class="detail-kanan">
+                            <p class="normal">Unit Price : <span id="harga-banyak"></span></p>
+                            <p class="normal" style="display: flex; justify-content: space-between; gap: 4em;">Quantity : <span class="stock" id="stok-${itemName}"></span></p>
+                        </div>
+                        <button id="remove">
+                            <span class="material-symbols-outlined" id="hapus">
+                                delete
+                                </span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tempat Harga barang -->
+                <div class="jajan" id="section-to-print">
+                    <P>Discount : </P>
+                    <p id="totalPrice" style="display: none;"></p>
+                    <P style="display: flex; justify-content: space-between;">Tax : <span id="taxDiscount">0</span></P>
+                    <div class="pay">
+                        <p>Total Amount : </p>
+                        <p id="totalAmount">0</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Main Content -->
+            <div class="kanan">
+
+                <!-- Navbar 3 paling atas-->
+                <nav>
+                    <!-- Nav sebelah kiri -->
+                    <div class="nav_kiri">
+                        <p>Item List</p>
+                    </div>
+
+                    <!-- Nav sebelah kanan -->
+                    <div class="nav_kanan">
+                        
+                        <!-- Search Icon -->
+                        <div class="cari"> 
+                            <span class="material-symbols-outlined" id="searchIcon">
+                                search
+                            </span>
+                            <input type="text" id="searchInput" placeholder="search" style="display: none;">
+                        </div>
+
+                        <!-- option icon -->
+                        <span class="material-symbols-outlined">
+                            more_vert
+                        </span>
+
+                        <!-- urutkan item -->
+                        <span class="material-symbols-outlined" id="sortByName">
+                            swap_vert
+                            </span>
+                    </div>
+                </nav>
+
+                <!-- List barang -->
+                <section>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="images/menu1.jpg" alt="">
+                        </div>
+                        <p>Pizza</p>
+                        <h1>Rp. 200.000</h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="images/menu2.jpg" alt="">
+                        </div>
+                        <p>Pasta</p>
+                        <h1>Rp. 70.000</h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="images/menu3.jpg" alt="">
+                        </div>
+                        <p>Hamburger</p>
+                        <h1>Rp. 40.000</h1>
+                    </div>
+
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="images/menu4.jpg" alt="">
+                        </div>
+                        <p>French Fries</p>
+                        <h1>Rp. 40.000</h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="images/menu5.jpg" alt="">
+                        </div>
+                        <p>Kentucky</p>
+                        <h1>Rp. 130.000</h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="images/menu6.jpg" alt="">
+                        </div>
+                        <p>Soto Betawi</p>
+                        <h1>Rp. 30.000</h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="images/menu7.jpg" alt="">
+                        </div>
+                        <p>Seblak</p>
+                        <h1>Rp. 25.000</h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="images/sashimi.jpg" alt="">
+                        </div>
+                        <p>Sashimi</p>
+                        <h1>Rp. 60.000</h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="images/shrimp.jpg" alt="">
+                        </div>
+                        <p>Shrimp</p>
+                        <h1>Rp. 35.000</h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="images/milkshakechoco.jpg" alt="">
+                        </div>
+                        <p>Milkshake Chocolate</p>
+                        <h1>Rp. 25.000</h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="images/milkshakevanilla.jpg" alt="">
+                        </div>
+                        <p>Milkshake Vanilla</p>
+                        <h1>Rp. 25.000</h1>
+                    </div>
+
+                    <div class="isi">
+                        <div class="foto">
+                            <img src="images/konci.jpg" alt="">
+                        </div>
+                        <p>Kunci Surga</p>
+                        <h1>Rp. 99.999.999</h1>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="payment">
+            <Button id="bayar">
+                <i class='bx bx-save' style="font-size: 30px;"></i>
+                <span>
+                    <p>Payment</p>
+                    <p>(CTRL + P)</p>
+                </span>
+            </Button>
+        </div>
+
+        <footer>
+            <p>Ready</p>
+        </footer>
+
+        <!-- penutup footer -->
+</body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="search.js"></script>
+    <script src="short.js"></script>
+    <script src="print.js"></script>
+    
+</html>
